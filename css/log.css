@@ -1,0 +1,394 @@
+:log{
+    --fontColorOne:#fff;
+    --fontColortwo:#000;
+    --fontFamily1:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.main{
+    width: 100%;
+    height: 100%; 
+
+    overflow: hidden;
+}
+@keyframes draw_log_title{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+.log_title_left,
+.sign_title_left{
+    width: 30%;
+    height: 50%;
+    position: absolute;
+    z-index: 99;
+    fill:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.log_on_title,
+.sign_in_title{
+    animation: draw_log_title 5s linear forwards;
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+}
+.log_title_left{
+    top: 50%;
+}
+/* 注册 ------------------------------------------------*/
+.sign_div{
+    width: 100%;
+    height: 100%;
+    background-color:#FF718E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -50%;
+}
+/* 对话框 */
+.sign_dis_div{
+    width: 80%;
+    height: 80%;
+
+    border-radius: 40pt;
+    background-color:#FF718E;
+    display: grid;
+    grid-template-columns: repeat(10,10%);
+    grid-template-rows: repeat(10,10%);
+    box-shadow: 0pt 10pt 25pt #8a0303;
+
+    opacity: 0;
+}
+/* 左侧 */
+.sign_decorat{
+    grid-row-start: 1;
+    grid-row-end: 11;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    border-top-left-radius: 40pt;
+    border-bottom-left-radius: 40pt;
+    /* background-color: cadetblue; */
+    background-image: url('../img/sign/origin6041fd3fe7bce76660512fd1.jpg');
+    background-size: auto 100%;
+    background-position: center;
+}
+/* 表单 */
+.sign_from{
+    grid-row-start: 1;
+    grid-row-end: 11;
+    grid-column-start: 6;
+    grid-column-end: 11;
+    display: grid;
+    background-color: #fff;
+    grid-template-columns: repeat(10,10%);
+    grid-template-rows: repeat(10,10%);
+    border-top-right-radius: 30pt;
+    border-bottom-right-radius: 30pt;
+
+}
+/* 标题 */
+.sign_title{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35pt;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* background-color: coral; */
+}
+/* 通过已有账号登录 */
+/* QQ，微信微博 */
+.log_one,
+.sign_one{
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    /* background-color: crimson; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+/* qq,wechat,weibo */
+.weibo_icon,
+.wechat_icon,
+.qq_icon{
+    width: 30pt;
+    height: 30pt;
+    margin: 0 20pt;
+}
+
+#qq_icon_log,
+#qq_icon_sign{
+    margin: 0 10pt;
+}
+/* qq */
+.qq_div_log,
+.qq_div_sign{
+    width: 50%;
+    height: 35%;
+    background-color: crimson;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    max-width: 300rem;
+    overflow: hidden;
+
+    color: #fff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.qq_div_log{
+    background-color: rgb(255, 179, 38);
+
+}
+.qq_div>h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 120%;
+}
+/* 横线 */
+.sign_line{
+    grid-row-start: 5;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    color: #ccc;
+    /* background-color: crimson; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sign_line_h::before{
+    content: ' ';
+    position:absolute;
+    width: 15%;
+    height: 1pt;
+    top: 44%;
+    right: 33%;
+    background-color: #ccc;
+}
+.sign_line_h::after{
+    content: '';
+    position: absolute;
+    width: 15%;
+    height: 1pt;
+    top: 44%;
+    right: 12%;
+    background-color: #ccc;
+}
+/* 用户名 */
+/* 统一设置 */
+.other_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.other_div>span{
+    font-size: 12px;
+    position: relative;
+    right: 20%;
+    color: #2c2c2c;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* 输入框 */
+.log_input,
+.sign_input{
+    width: 45%;
+    height: 40%;
+    background-color: none;
+    border-radius: 3pt;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 0 10pt;
+    text-shadow: none;
+    text-decoration: none;
+}
+.log_form_user,
+.sign_form_user{
+    grid-row-start: 6;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    /* background-color: darkgray; */
+}
+/* 密码 */
+.log_form_password,
+.sign_form_password{
+    grid-row-start: 7;
+    grid-row-end: 7;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    /* background-color: rgb(138, 75, 75); */
+}
+/* 确认密码 */
+.sign_form_password_second{
+    grid-row-start: 8;
+    grid-row-end: 8;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    /* background-color: rgb(136, 51, 51); */
+}
+/* 邮箱 */
+.sign_form_mail{
+    grid-row-start: 9;
+    grid-row-end: 9;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    /* background-color: rgb(105, 69, 69); */
+}
+/* 提交 */
+.sign_submit_div{
+    grid-row-start: 10;
+    grid-row-end: 10;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    /* background-color: darkmagenta; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.submit_btn{
+    width: 30%;
+    height: 50%;
+    background-color: crimson;
+    border: none;
+    border-radius: 10pt;
+    color: #fff;
+    font-size: 14pt;
+}
+.log_btn:hover,
+.submit_btn:hover{
+    cursor: pointer;
+}
+/* down */
+/* up */
+.sign_down{
+    width: 20pt;
+    height: 20pt;
+    position: relative;
+    top: 5%;
+}
+.log_up{
+    width: 30pt;
+    height: 30pt;
+    position: relative;
+    bottom: 5%;
+}
+.log_up:hover,
+.sign_down:hover{
+    cursor: pointer;
+}
+/* 登录------------------------------------------------ */
+.log_div{
+    height: 100%;
+    width: 100%;
+    background-color: #ffce8e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    top: -50%;
+}
+.log_dis_div{
+    height: 80%;
+    width: 80%;
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: repeat(10,10%);
+    grid-template-rows: repeat(10,10%);
+
+    border-radius: 30pt;
+    box-shadow: 0pt 10pt 25pt #865204;
+
+
+    opacity: 0;
+}
+.log_decorat{
+    grid-row-start: 1;
+    grid-row-end: 11;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    background-image: url('../img/log/origin5ced0809e7bce720f6f0185b.jpg');
+    
+    background-color: #ffbb3d;
+    border-top-left-radius: 30pt;
+    border-bottom-left-radius: 30pt;
+}
+/* 会话框 */
+.log_form{
+    grid-row-start: 1;
+    grid-row-end: 11;
+    grid-column-start: 6;
+    grid-column-end:11;
+    border-top-right-radius: 30pt;
+    border-bottom-right-radius:30pt;
+
+    display: grid;
+    grid-template-columns: repeat(10,10%);
+    grid-template-rows: repeat(10,10%);
+
+    background-color: #ffeba8;
+}
+.log_title{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end:11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    /* background-color: blanchedalmond; */
+}
+/* 横线 */
+.log_line{
+    grid-row-start: 5;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end:11;
+    color: #808080;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.log_btn{
+    background-color: #ffbb3d;
+}
+.log_submit_div{
+    grid-row-start: 9;
+    grid-row-end: 11;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.log_btn{
+    height: 30%;
+    width: 40%;
+    border: none;
+    border-radius: 13pt;
+    color: #fff;
+    font-size: 14pt;
+}
+/* svg -------------------------------------------*/
+.sign_svg{
+    width: 50%;
+    height: 35%;
+    background-color: #ccc;
+    position: absolute;
+    z-index: 99;
+    left: 30%;
+    top: 5%;
+}
